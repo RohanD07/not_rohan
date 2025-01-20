@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crop advisior</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            overflow: hidden;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container table{
+            margin-top: 1rem;
+            border-spacing: 1rem;
+        }
+        .container table input{
+            width: 15rem;
+            height:2rem;
+        }
+        input[type=text] { text-align:center }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 2rem;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border: 1px solid #34db4d;
+            border-radius: 4px;
+            color: #ffffff;
+            background-color: #41f007;
+        }
+
+        .button:hover {
+            background-color: #29b93f;
+            border-color: #30b929;
+        }
+        
+        .heading{
+            margin-top: 2rem;
+            color: #4534db;
+        }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">CROP ADVISIOR</h1>
+        <table>
+            <tr>
+                <td>Nitrogen</td>
+                <td><input type="number" name="N" id="N"></td>
+            </tr>
+            <tr>
+                <td>Phosphorous</td>
+                <td><input type="number" name="P" id="P"></td>
+            </tr>
+            <tr>
+                <td>Potassium</td>
+                <td><input type="number" name="K" id="K"></td>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td><input type="number" name="temperature" id="temperature"></td>
+            </tr>
+            <tr>
+                <td>Humidity</td>
+                <td><input type="number" name="humidity" id="humidity"></td>
+            </tr>
+            <tr>
+                <td>PH</td>
+                <td><input type="number" name="ph" id="ph"></td>
+            </tr>
+            <tr>
+                <td> Rainfall</td>
+                <td><input type="number" name="rainfall" id="rainfall"></td>
+            </tr>
+            <tr>
+                <td>CROP</td>
+                <td><input type="text" name="RESULT" value="NONE" id="RESULT"  disabled></td>
+            </tr>
+             
+        </table>
+        <button type="submit" class="button">Predict</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
